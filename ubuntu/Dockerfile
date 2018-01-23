@@ -16,7 +16,7 @@ RUN apt update && \
         xvfb && \
     apt clean
 RUN apt install -y \
-        gedit \
+        gedit
 COPY fluxbox/* /docker/.fluxbox/
 COPY bootstrap.sh /
 RUN chmod u+x /bootstrap.sh
