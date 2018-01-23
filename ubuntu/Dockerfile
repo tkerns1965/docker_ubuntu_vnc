@@ -19,6 +19,7 @@ RUN apt install -y \
         gedit
 RUN apt install -y \
         net-tools \
+        python \
         wget && \
     mkdir -p $HOME/noVNC/utils/websockify && \
     wget -qO- https://github.com/novnc/noVNC/archive/v0.6.2.tar.gz | tar xz --strip 1 -C $HOME/noVNC && \
