@@ -18,7 +18,7 @@ RUN apt update && \
 RUN apt install -y \
         gedit
 RUN apt install -y \
-        netstat \
+        netstat-nat \
         wget
         # && \
     # mkdir -p $HOME/noVNC/utils/websockify && \
