@@ -7,7 +7,7 @@ services:
             args:
                 - UBUNTU_VERSION=16.04
                 - VNC_PASSWORD=${VNC_PASSWORD}
-        image: ubuntu_vnce
+        image: ubuntu_vnc
         container_name: ubuntu_vnc1
         ports:
             - "5901:5901"
