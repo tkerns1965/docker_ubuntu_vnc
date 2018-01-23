@@ -19,13 +19,12 @@ RUN apt install -y \
         gedit
 RUN apt install -y \
         netstat-nat \
-        wget
-        # && \
-    # mkdir -p $HOME/noVNC/utils/websockify && \
-    # wget -qO- https://github.com/novnc/noVNC/archive/v0.6.2.tar.gz | tar xz --strip 1 -C $HOME/noVNC && \
-    # wget -qO- https://github.com/novnc/websockify/archive/v0.6.1.tar.gz | tar xz --strip 1 -C $HOME/noVNC/utils/websockify && \
-    # chmod +x -v $HOME/noVNC/utils/*.sh && \
-    # ln -s $HOME/noVNC/vnc_auto.html $HOME/noVNC/index.html
+        wget && \
+    mkdir -p $HOME/noVNC/utils/websockify && \
+    wget -qO- https://github.com/novnc/noVNC/archive/v0.6.2.tar.gz | tar xz --strip 1 -C $HOME/noVNC && \
+    wget -qO- https://github.com/novnc/websockify/archive/v0.6.1.tar.gz | tar xz --strip 1 -C $HOME/noVNC/utils/websockify && \
+    chmod +x -v $HOME/noVNC/utils/*.sh && \
+    ln -s $HOME/noVNC/vnc_auto.html $HOME/noVNC/index.html
 COPY fluxbox/* /docker/.fluxbox/
 COPY bootstrap.sh /
 RUN chmod u+x /bootstrap.sh
