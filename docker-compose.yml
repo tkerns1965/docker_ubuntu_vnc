@@ -14,4 +14,4 @@ services:
             # - /srv/docker_volumes/letsencrypt:/etc/letsencrypt
         ports:
             - "5901:5901"
-            # - ":"
+            - "6901:6901"
