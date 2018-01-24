@@ -66,9 +66,8 @@ RUN cd $HOME/gnucash_source && \
     mkdir build-cmake && \
     cd build-cmake && \
     cmake -D CMAKE_INSTALL_PREFIX=$HOME/gnucash_cmake -D WITH_AQBANKING=OFF -D WITH_OFX=OFF $HOME/gnucash_source && \
-    make
-    # && \
-    # make install
+    make && \
+    make install
 COPY fluxbox/* /docker/.fluxbox/
 COPY bootstrap.sh /
 RUN chmod u+x /bootstrap.sh
