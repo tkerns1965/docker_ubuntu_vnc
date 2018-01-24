@@ -27,42 +27,42 @@ RUN apt install -y \
         tar xz --strip 1 -C $HOME/noVNC/utils/websockify && \
     chmod +x -v $HOME/noVNC/utils/*.sh && \
     ln -s $HOME/noVNC/vnc_auto.html $HOME/noVNC/index.html
-RUN apt install -y \
-        autoconf \
-        automake \
-        autotools-dev \
-        cmake \
-        google-mock \
-        gtk+3.0 \
-        guile-2.0 \
-        guile-2.0-dev \
-        icu-devtools \
-        intltool \
-        libboost-all-dev \
-        libdbi-dev \
-        libglib2.0-dev \
-        libgtest-dev \
-        libgtk-3-dev \
-        libicu-dev \
-        libltdl-dev \
-        libsigsegv2 \
-        libtool \
-        libwebkit2gtk-4.0-37 \
-        libwebkit2gtk-4.0-dev \
-        libxml++2.6-dev \
-        libxslt1-dev \
-        m4 \
-        swig2.0 \
-        texinfo \
-        xsltproc && \
-    mkdir -p $HOME/gnucash_source && \
+# RUN apt install -y autoconf
+# RUN apt install -y automake
+# RUN apt install -y autotools-dev
+RUN apt install -y cmake
+# RUN apt install -y google-mock
+# RUN apt install -y gtk+3.0
+# RUN apt install -y guile-2.0
+# RUN apt install -y guile-2.0-dev
+# RUN apt install -y icu-devtools
+# RUN apt install -y intltool
+# RUN apt install -y libboost-all-dev
+# RUN apt install -y libdbi-dev
+# RUN apt install -y libglib2.0-dev
+# RUN apt install -y libgtest-dev
+# RUN apt install -y libgtk-3-dev
+# RUN apt install -y libicu-dev
+# RUN apt install -y libltdl-dev
+# RUN apt install -y libsigsegv2
+# RUN apt install -y libtool
+# RUN apt install -y libwebkit2gtk-4.0-37
+# RUN apt install -y libwebkit2gtk-4.0-dev
+# RUN apt install -y libxml++2.6-dev
+# RUN apt install -y libxslt1-dev
+# RUN apt install -y m4
+# RUN apt install -y swig2.0
+# RUN apt install -y texinfo
+# RUN apt install -y xsltproc
+RUN mkdir -p $HOME/gnucash_source && \
     wget -qO- https://sourceforge.net/projects/gnucash/files/gnucash%20%28stable%29/2.6.19/gnucash-2.6.19.tar.gz | \
-        tar xz --strip 1 -C / && \
-    mkdir build-cmake && \
-    cd build-cmake && \
-    cmake -D CMAKE_INSTALL_PREFIX=<target>/gnucash-cmake -D WITH_AQBANKING=OFF -D WITH_OFX=OFF ../gnucash && \
-    make && \
-    make install
+        tar xz --strip 1 -C /
+        # && \
+    # mkdir build-cmake && \
+    # cd build-cmake && \
+    # cmake -D CMAKE_INSTALL_PREFIX=<target>/gnucash-cmake -D WITH_AQBANKING=OFF -D WITH_OFX=OFF ../gnucash && \
+    # make && \
+    # make install
 COPY fluxbox/* /docker/.fluxbox/
 COPY bootstrap.sh /
 RUN chmod u+x /bootstrap.sh
