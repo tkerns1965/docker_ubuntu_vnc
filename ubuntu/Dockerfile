@@ -62,6 +62,9 @@ RUN apt install -y libxslt1-dev
 # RUN apt install -y swig2.0
 RUN apt install -y texinfo
 RUN apt install -y xsltproc
+
+RUN apt install -y evince
+
 RUN cd $HOME/gnucash_source && \
     mkdir build-cmake && \
     cd build-cmake && \
