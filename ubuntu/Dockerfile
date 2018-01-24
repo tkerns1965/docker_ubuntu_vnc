@@ -56,11 +56,12 @@ RUN apt install -y cmake
 # RUN apt install -y xsltproc
 RUN mkdir -p $HOME/gnucash_source && \
     wget -qO- https://sourceforge.net/projects/gnucash/files/gnucash%20%28stable%29/2.6.19/gnucash-2.6.19.tar.gz | \
-        tar xz --strip 1 -C $HOME/gnucash_source
-        # && \
-    # mkdir build-cmake && \
-    # cd build-cmake && \
-    # cmake -D CMAKE_INSTALL_PREFIX=<target>/gnucash-cmake -D WITH_AQBANKING=OFF -D WITH_OFX=OFF ../gnucash && \
+        tar xz --strip 1 -C $HOME/gnucash_source && \
+    cd $HOME/gnucash_source && \
+    mkdir build-cmake && \
+    cd build-cmake && \
+    cmake -D CMAKE_INSTALL_PREFIX=$HOME/gnucash_cmake -D WITH_AQBANKING=OFF -D WITH_OFX=OFF $HOME/gnucash_source
+    # && \
     # make && \
     # make install
 COPY fluxbox/* /docker/.fluxbox/
