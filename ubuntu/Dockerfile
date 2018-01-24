@@ -30,6 +30,7 @@ RUN apt install -y \
 # RUN apt install -y autoconf
 # RUN apt install -y automake
 # RUN apt install -y autotools-dev
+RUN apt install -y build-essential
 RUN apt install -y cmake
 # RUN apt install -y google-mock
 # RUN apt install -y gtk+3.0
