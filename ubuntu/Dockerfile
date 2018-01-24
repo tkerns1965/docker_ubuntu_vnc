@@ -44,6 +44,7 @@ RUN apt install -y cmake
 # RUN apt install -y libboost-all-dev
 # RUN apt install -y libdbi-dev
 RUN apt install -y libglib2.0-dev
+RUN apt install -y libgnomecanvas2-dev
 # RUN apt install -y libgtest-dev
 # RUN apt install -y libgtk-3-dev
 # RUN apt install -y libicu-dev
