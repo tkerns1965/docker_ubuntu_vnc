@@ -51,12 +51,12 @@ RUN apt install -y libgnomecanvas2-dev
 # RUN apt install -y libltdl-dev
 # RUN apt install -y libsigsegv2
 # RUN apt install -y libtool
-RUN apt install -y libwebkit2gtk-4.0-37
-# RUN apt install -y libwebkit2gtk-4.0-dev
+# RUN apt install -y libwebkit2gtk-4.0-37
+RUN apt install -y libwebkit2gtk-4.0-dev
 RUN apt install -y libxml++2.6-dev
 RUN apt install -y libxslt1-dev
 # RUN apt install -y m4
-RUN apt install -y pkg-config
+# RUN apt install -y pkg-config
 # RUN apt install -y swig2.0
 # RUN apt install -y texinfo
 # RUN apt install -y xsltproc
