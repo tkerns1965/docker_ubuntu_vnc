@@ -9,12 +9,12 @@ ENV DEBIAN_FRONTEND=noninteractive \
 EXPOSE $VNC_PORT \
        $NO_VNC_PORT
 RUN apt update && \
+    apt clean && \
     apt install -y \
         fluxbox \
         wmctrl \
         x11vnc \
-        xvfb && \
-    apt clean
+        xvfb
 RUN apt install -y \
         gedit
 RUN apt install -y \
