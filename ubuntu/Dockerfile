@@ -60,7 +60,7 @@ RUN apt install -y libxslt1-dev
 # RUN apt install -y m4
 # RUN apt install -y pkg-config
 # RUN apt install -y swig2.0
-# RUN apt install -y texinfo
+RUN apt install -y texinfo
 RUN apt install -y xsltproc
 RUN cd $HOME/gnucash_source && \
     mkdir build-cmake && \
