@@ -38,11 +38,11 @@ RUN apt install -y cmake
 # RUN apt install -y google-mock
 # RUN apt install -y gtk+3.0
 # RUN apt install -y guile-2.0
-# RUN apt install -y guile-2.0-dev
+RUN apt install -y guile-2.0-dev
 # RUN apt install -y icu-devtools
-# RUN apt install -y intltool
+RUN apt install -y intltool
 # RUN apt install -y libboost-all-dev
-# RUN apt install -y libdbi-dev
+RUN apt install -y libdbi-dev
 RUN apt install -y libglib2.0-dev
 RUN apt install -y libgnomecanvas2-dev
 RUN apt install -y libgoffice-0.8-dev
